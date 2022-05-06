@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d807b70-dba2-4fa4-b275-116a0dc588b8" name="Changes" comment="Added database and user input to add products.">
+    <list default="true" id="2d807b70-dba2-4fa4-b275-116a0dc588b8" name="Changes" comment="Created User Login System.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651785359832</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created User Login System.">
+      <created>1651791125950</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651791125950</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commitment" />
     <MESSAGE value="Added database and user input to add products." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added database and user input to add products." />
+    <MESSAGE value="Created User Login System." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created User Login System." />
   </component>
 </project>
