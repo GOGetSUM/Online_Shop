@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d807b70-dba2-4fa4-b275-116a0dc588b8" name="Changes" comment="Started Cart Logic">
+    <list default="true" id="2d807b70-dba2-4fa4-b275-116a0dc588b8" name="Changes" comment="Completed Cart Logic, next is Stripe API set up for payment processing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651797355671</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Completed Cart Logic, next is Stripe API set up for payment processing.">
+      <created>1651856850187</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651856850187</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +144,7 @@
     <MESSAGE value="Added database and user input to add products." />
     <MESSAGE value="Created User Login System." />
     <MESSAGE value="Started Cart Logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started Cart Logic" />
+    <MESSAGE value="Completed Cart Logic, next is Stripe API set up for payment processing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Cart Logic, next is Stripe API set up for payment processing." />
   </component>
 </project>
