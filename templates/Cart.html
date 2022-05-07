@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+{% extends 'bootstrap/base.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+
+<html>
+	<head>
+		<title>What The Find</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+
+{% endblock %}
+{% block content %}
+
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<h1 id="logo"><a href="#">WHAT THE FIND</a></h1>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="/" class="active">HOME</a></li>
+						<li><a href="/#two">FINDS</a></li>
+						<li><a href="{{ url_for('register') }}" class="btn btn-secondary btn-block btn-large">REGISTER</a></li>
+						<li><a href="{{ url_for('login') }}" class="btn btn-primary btn-block btn-large">LOG IN</a></li>
+						<li><a class="nav-link" href="{{ url_for('logout') }}">LOG OUT</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+																<div class="image main" data-position="center">
+									<img src="{{ url_for('static', filename='images/banner01.png') }}" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>"Gimme da loot!"</h2>
+										<p>Lookin pretty nice, gotta secure da bag.<br />
+									</header>
+
+									<div>
+										<h3>Cart:</h3>
+									</div>
+
+									<div class="divTable">
+										<div class="headRow">
+											<div class="divCell"><h4>Product Name:</h4></div>
+											<div  class="divCell"><h4>Price:</h4></div>
+											<div  class="divCell"><h4>X</h4></div>
+										</div>
+										{% for item in cart %}
+										<div class="divRow">
+											{% for x in range(0,2) %}
+											<div class="divCell">{{cart[item][x]}}</div>
+											{% endfor %}
+											<div class="divCell"><a href="{{ url_for('remove', cart_id=item) }}" >Delete</a></div>
+
+										</div>
+										{% endfor %}
+										<div class="divRow">
+											<div class="divCell1">Total:</div>
+											<div class="divCell1">${{tot}}</div>
+											<div class="divCell1">
+												<a href="#" ><input type="submit" class="primary" value="Checkout"  /></a>
+											</div
+										</div>
+									</div>
+								</div>
+							</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; What The Find. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
+{% endblock %}

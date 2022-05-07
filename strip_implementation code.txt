@@ -1,0 +1,7 @@
+1 Set Up Stripe
+    sign up
+2 enable payment methods
+3 Create a Paymentintent
+4 Collect payment details
+5 Add the payment element to your payment page
+
