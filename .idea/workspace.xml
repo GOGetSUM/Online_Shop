@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d807b70-dba2-4fa4-b275-116a0dc588b8" name="Changes" comment="Only thing left is Payment transaction through stripe. Did not plug it in.">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/django-admin.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/flask.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/normalizer.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/sqlformat.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2d807b70-dba2-4fa4-b275-116a0dc588b8" name="Changes" comment="added environment variables, procfile &amp; gunicorn">
+      <change afterPath="$PROJECT_DIR$/Scripts/gunicorn.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Inventory.db" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoponline_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/shoponline_server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +34,15 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28iZ7bLkcezls9FZ2zNN4qKkpHg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -191,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651903521387</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added environment variables, procfile &amp; gunicorn">
+      <created>1653001856506</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653001856506</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +208,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commitment" />
     <MESSAGE value="Added database and user input to add products." />
     <MESSAGE value="Created User Login System." />
@@ -213,6 +216,7 @@
     <MESSAGE value="Completed Cart Logic, next is Stripe API set up for payment processing." />
     <MESSAGE value="Cart bug adds multiple of same item, this capability needs to be limited." />
     <MESSAGE value="Only thing left is Payment transaction through stripe. Did not plug it in." />
-    <option name="LAST_COMMIT_MESSAGE" value="Only thing left is Payment transaction through stripe. Did not plug it in." />
+    <MESSAGE value="added environment variables, procfile &amp; gunicorn" />
+    <option name="LAST_COMMIT_MESSAGE" value="added environment variables, procfile &amp; gunicorn" />
   </component>
 </project>
