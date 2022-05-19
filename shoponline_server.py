@@ -9,13 +9,13 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, cur
 from functools import wraps
 from django.contrib import messages
 import collections
-
+import os
 
 #--------------SetUp App----------------------------------------------------------------
 
 app = Flask(__name__)
 #Secret Key for DB
-app.config['SECRET_KEY'] = KEY
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 Bootstrap(app)
 
 #-------------Connect DB-----------------------------------------------------------------
@@ -31,12 +31,6 @@ login_manager.init_app(app)
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
-
-
-#------------------------------------------------------------------------------------------
-
-
 
 #-------------Configure Databases-----------------------------------------------------------------
 class Inventory(db.Model):
@@ -67,8 +61,7 @@ class Cart(db.Model):
     product_name= db.Column(db.String(100),nullable=False)
     prod_price = db.Column(db.Float, nullable=False)
     Tot_price = db.Column(db.Float, nullable=False)
-#
-#
+
 db.create_all()
 
 #-------------Create Record-----------------------------------------------------------------
@@ -85,9 +78,7 @@ new_product = Inventory(
 # db.session.add(new_product)
 # db.session.commit()
 
-
 #-------------Admin Only function-----------------------------------------------------------------
-
 
 def admin_only(f):
     @wraps(f)
@@ -155,8 +146,6 @@ def register():
         return redirect(url_for("home"))
 
     return render_template("register.html", logged_in=current_user.is_authenticated)
-
-
 
 #-------------Index Add Products-----------------------------------------------------------------
 #Add -  Product Form
@@ -280,8 +269,6 @@ def cart():
     return render_template('Cart.html', cart=cart_dictionary, tot=total )
 
 
-
-
 #---------Add to Cart---------------------------------------------------------------------
 
 @app.route('/additem')
@@ -298,8 +285,6 @@ def additem():
     prod_id_ = prod.id
     prof_id = current_user.id
     tot_ = price_*2
-
-
 
     new_item = Cart(
         id=id_new,
@@ -327,13 +312,9 @@ def remove():
 
     return redirect('/Cart')
 
-
-
 #---------Payment Transaction---------------------------------------------------------------------
 
-
-
-
+# Section for stripe functionability.
 
 #---------Payment Transaction Completed-Remove Sold Items---------------------------------------------------------------------
 
@@ -349,10 +330,6 @@ def removeitems():
 
     item_.delete().where(item_.c.profile_id == f'{id}')
     return
-
-
-
-
 
 #---------Run App---------------------------------------------------------------------
 
