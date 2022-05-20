@@ -11,6 +11,8 @@ from django.contrib import messages
 import collections
 import os
 
+
+
 #--------------SetUp App----------------------------------------------------------------
 
 app = Flask(__name__)
@@ -18,8 +20,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 Bootstrap(app)
 
+
 #-------------Connect DB-----------------------------------------------------------------
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL","sqlite:///blog.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("sqlite:///Inventory.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -63,6 +66,8 @@ class Cart(db.Model):
     Tot_price = db.Column(db.Float, nullable=False)
 
 db.create_all()
+
+
 
 #-------------Create Record-----------------------------------------------------------------
 new_product = Inventory(

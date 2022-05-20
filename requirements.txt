@@ -27,4 +27,4 @@ is-disposable-email==1.0.0
 itsdangerous==2.1.2
 sqlparse==0.4.2
 gunicorn==20.1.0
-psycopg2-binary==2.9.3
+
