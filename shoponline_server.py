@@ -11,15 +11,12 @@ from django.contrib import messages
 import collections
 import os
 
-
-
 #--------------SetUp App----------------------------------------------------------------
 
 app = Flask(__name__)
 #Secret Key for DB
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 Bootstrap(app)
-
 
 #-------------Connect DB-----------------------------------------------------------------
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("sqlite:///Inventory.db")
@@ -67,8 +64,6 @@ class Cart(db.Model):
 
 db.create_all()
 
-
-
 #-------------Create Record-----------------------------------------------------------------
 new_product = Inventory(
     id=1,
@@ -92,7 +87,6 @@ def admin_only(f):
             return abort(403)
         return f(*args, **kwargs)
     return decorated_function
-
 
 #-------------Index Home-----------------------------------------------------------------
 @app.route('/')
@@ -124,7 +118,6 @@ def login():
             return redirect(url_for('home'))
 
     return render_template("login.html", logged_in=current_user.is_authenticated)
-
 
 #-------------Index Register-----------------------------------------------------------------
 @app.route('/register', methods=["GET", "POST"])
@@ -190,7 +183,6 @@ def add_product():
         db.session.commit()
         return redirect(url_for("home"))
     return render_template('add.html', form=form1)
-
 
 #-------------Index Delete Products-----------------------------------------------------------------
 @app.route('/delete', methods=["GET"])
