@@ -1,1 +1,1 @@
-web: gunicorn shoponline_server:app
+web: gunicorn main2:app
