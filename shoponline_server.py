@@ -62,7 +62,7 @@ class Cart(db.Model):
     prod_price = db.Column(db.Float, nullable=False)
     Tot_price = db.Column(db.Float, nullable=False)
 
-db.create_all()
+# db.create_all()
 
 #-------------Create Record-----------------------------------------------------------------
 new_product = Inventory(
