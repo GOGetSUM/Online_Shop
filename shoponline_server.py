@@ -75,8 +75,8 @@ new_product = Inventory(
     inventory=1,
 )
 
-db.session.add(new_product)
-db.session.commit()
+# db.session.add(new_product)
+# db.session.commit()
 
 #-------------Admin Only function-----------------------------------------------------------------
 
