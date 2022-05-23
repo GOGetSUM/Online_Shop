@@ -11,6 +11,7 @@ from django.contrib import messages
 import collections
 import os
 
+
 #--------------SetUp App----------------------------------------------------------------
 
 app = Flask(__name__)
