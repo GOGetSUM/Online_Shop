@@ -10,12 +10,11 @@
 		<title>What The Find</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
 	</head>
 {% endblock %}
 {% block content %}
-	<body class="is-preload">
-
+	<body class="pre-load">
 		<!-- Header -->
 			<section id="header">
 				<header>
@@ -453,7 +452,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</ul>
 						</div>
 					</section>
-
 			</div>
 
 		<!-- Scripts -->
@@ -465,8 +463,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="static/assets/js/util.js"></script>
 			<script src="static/assets/js/main.js"></script>
 
+		<div id="titleBar"><a href="#header" class="toggle"></a>
+		<span class="title"></span>
+		<script>
+			function myFunction() {
+				var element = document.getElementById("is-preload");
+				element.classList.add("header-visible");
+			}
+		</script>
+		</div>
+
+
 	</body>
 </html>
 
 {% endblock %}
+
+
 
