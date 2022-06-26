@@ -1,7 +1,9 @@
 # Set your secret key. Remember to switch to your live secret key in production.
 # See your keys here: https://dashboard.stripe.com/apikeys
+import os
+
 import stripe
-stripe.api_key = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+stripe.api_key = os.environ.get('Stripe_API_KEY')
 
 stripe.PaymentIntent.create(
   amount=1099,

@@ -10,11 +10,13 @@ from functools import wraps
 from django.contrib import messages
 import collections
 import os
+from dotenv import load_dotenv
 
 
 #--------------SetUp App----------------------------------------------------------------
 
 app = Flask(__name__)
+load_dotenv('.env')
 #Secret Key for DB
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 Bootstrap(app)
@@ -94,6 +96,7 @@ def admin_only(f):
 def home():
     #Retrieve all Product from Database to Build
     all_product = Inventory.query.order_by(Inventory.inventory.desc()).all()
+    print(all_product)
 
     return render_template('index.html', all=all_product, logged_in=current_user.is_authenticated)
 
@@ -104,7 +107,7 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        user =  User.query.filter_by(email=email).first()
+        user = User.query.filter_by(email=email).first()
         # Email doesn't exist
         if not user:
             flash("That email does not exist, please try again.")
